@@ -65,7 +65,7 @@ python download.py --model --model-name DMP_DUN_plus_4step --cs-ratios 0.5,0.25,
 
 ### Download Models and Testsets (Manual Way)
 
-You can also download our models and testsets in manual way. Our official models and testsets can be download on [Modelscope](https://www.modelscope.cn/models/FengodChen/DMP-DUN/files) or [Baidu Netdisk](https://pan.baidu.com/s/0kkvO720f1SLSP4-J14x7Rw?pwd=ix1w). The full folder tree of our used datasets is as follows:
+You can also download our models and testsets in manual way. Our official models and testsets can be download on [Modelscope](https://www.modelscope.cn/models/FengodChen/DMP-DUN/files) or [Baidu Netdisk](https://pan.baidu.com/s/1k7UJhswfXrmjFDWT81P1cg?pwd=8hjr). The full folder tree of our used datasets is as follows:
 ```
 .
 ├── datasets
@@ -226,7 +226,7 @@ If you want to use your own dataset for training, you can also put them into `./
             ├── ...
             └── xxx
 ```
-And you should modify the configs files in `./configs/xxx.py` to declare your dataset path and loading method (Approximately between lines 103 and 141 of the config file).
+and you should modify the configs files in `./configs/xxx.py` to declare your dataset path and loading method (Approximately between lines 103 and 141 of the config file).
 
 ### Prepare Training Config
 All the official configs are stored in `./configs/xxx.py`, you can modify this file to change some configs such as batch size, learning rate, training epoch, and etc.

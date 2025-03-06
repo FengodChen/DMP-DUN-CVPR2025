@@ -1,12 +1,13 @@
 
 <div style="text-align: center; ">
 
-# <span>Using Powerful Prior Knowledge of Diffusion Model in Deep Unfolding Networks for Image Compressive Sensing</span> <br><br> <small> —— CVPR 2025 —— </small>
+# <span>Using Powerful Prior Knowledge of Diffusion Model in Deep Unfolding Networks for Image Compressive Sensing</span>  
 
 </div>
 
 <div align="center">
 
+<h3>—— CVPR 2025 ——</h3>
 
 **Chen Liao**<sup> 1</sup>   **Yan Shen**<sup> 1, ✉</sup>   **Dan Li**<sup> 1</sup>   **Zhongli Wang**<sup> 2</sup>
 

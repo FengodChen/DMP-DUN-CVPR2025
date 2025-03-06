@@ -222,14 +222,14 @@ If you want to use your own dataset for training, you can also put them into `./
 └── datasets
     └── <Your own dataset>
         └── 1
-            ├── xxx
+            ├── <image_name_1>
             ├── ...
-            └── xxx
+            └── <image_name_N>
 ```
-and you should modify the configs files in `./configs/xxx.py` to declare your dataset path and loading method (Approximately between lines 103 and 141 of the config file).
+and you should modify the configs files in `./configs/<model_name>.py` to declare your dataset path and loading method (Approximately between lines 103 and 141 of the config file).
 
 ### Prepare Training Config
-All the official configs are stored in `./configs/xxx.py`, you can modify this file to change some configs such as batch size, learning rate, training epoch, and etc.
+All the official configs are stored in `./configs/<model_name>.py`, you can modify this file to change some configs such as batch size, learning rate, training epoch, and etc.
 
 ### Begin Training
 

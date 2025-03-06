@@ -1,0 +1,15 @@
+__pycache__/
+venv/
+
+datasets/
+pretrained_guided_diffusion/
+log/
+save/
+
+temp_monitor_file/
+temp_queue_file/
+
+test_ans.txt
+
+._____temp/
+.msc

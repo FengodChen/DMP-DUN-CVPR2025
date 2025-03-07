@@ -17,39 +17,45 @@
 
 ## Abstract
 
-Recently, Deep Unfolding Networks (DUNs) have achieved impressive reconstruction quality in the field of image Compressive Sensing (CS) by unfolding iterative optimization algorithms into neural networks. The reconstruction quality of DUNs depends on the learned prior knowledge, so introducing stronger prior knowledge can further improve reconstruction quality. On the other hand, pre-trained diffusion models contain powerful prior knowledge and have a solid theoretical foundation and strong scalability, but it requires a large number of iterative steps to achieve reconstruction. In this paper, we propose to use the powerful prior knowledge of pre-trained diffusion model in DUNs to achieve high-quality reconstruction with less steps for image CS. Specifically, we first design an iterative optimization algorithm named Diffusion Message Passing (DMP), which embeds a pre-trained diffusion model into each iteration process of DMP. Then, we deeply unfold the DMP algorithm into a neural network named DMP-DUN. The proposed DMP-DUN can use lightweight neural networks to achieve mapping from measurement data to the intermediate steps of the reverse diffusion process and directly approximate the divergence of the diffusion model, thereby further improving reconstruction efficiency. Extensive experiments show that our proposed DMP-DUN achieves state-of-the-art performance and requires at least only 2 steps to reconstruct the image.
+Recently, Deep Unfolding Networks (DUNs) have achieved impressive reconstruction quality in the field of image Compressive Sensing (CS) by unfolding iterative optimization algorithms into neural networks. The reconstruction quality of DUNs depends on the learned prior knowledge, so introducing stronger prior knowledge can further improve reconstruction quality. On the other hand, pretrained diffusion models contain powerful prior knowledge and have a solid theoretical foundation and strong scalability, but it requires a large number of iterative steps to achieve reconstruction. In this paper, we propose to use the powerful prior knowledge of pretrained diffusion model in DUNs to achieve high-quality reconstruction with less steps for image CS. Specifically, we first design an iterative optimization algorithm named Diffusion Message Passing (DMP), which embeds a pretrained diffusion model into each iteration process of DMP. Then, we deeply unfold the DMP algorithm into a neural network named DMP-DUN. The proposed DMP-DUN can use lightweight neural networks to achieve mapping from measurement data to the intermediate steps of the reverse diffusion process and directly approximate the divergence of the diffusion model, thereby further improving reconstruction efficiency. Extensive experiments show that our proposed DMP-DUN achieves state-of-the-art performance and requires at least only 2 steps to reconstruct the image.
+
+## Network Architecture
+
+![](./assets/DMP_DUN.png)
 
 ## Results
 
 ![](./assets/table.png)
 
-## Enviroment
+## Environment
 
 We use Ubuntu 24.04 and NVIDIA RTX 3090, with Python 3.10.10.
 
-You can install the pip package by typing follows commands:
+You can install the pip package by typing following commands:
 
-``` python -m pip install -r requirements.txt ```
+```bash
+python -m pip install -r requirements.txt
+```
 
-We highly recommend to run in a new virtual Python environment.
+We highly recommend running in a new virtual Python environment.
 
 ## Testing DMP-DUN
 
 ### Download Models and Testsets (Easy Way)
 
-We have written an automatic download script to facilitate the download. You can download a specific testset or model as the following command:
-```
+We have written an automatic download script to facilitate the download. You can download a specific testset or model as the following commands:
+```bash
 # Download Testset
 python download.py --testset --testset-name <testset_name>
 ```
 
-```
+```bash
 # Download Model
 python download.py --model --model-name <model_name> --cs-ratios <cs_ratios>
 ```
 
-The following command will donwload all testsets and models:
-```
+The following commands will donwload all testsets and models:
+```bash
 # Download Testset
 python download.py --testset --testset-name Set11
 python download.py --testset --testset-name Urban100
@@ -63,7 +69,7 @@ python download.py --model --model-name DMP_DUN_plus_4step --cs-ratios 0.5,0.25,
 ### Download Models and Testsets (Manual Way)
 
 You can also download our models and testsets in manual way. Our official models and testsets can be download on [Modelscope](https://www.modelscope.cn/models/FengodChen/DMP-DUN/files) or [Baidu Netdisk](https://pan.baidu.com/s/1k7UJhswfXrmjFDWT81P1cg?pwd=8hjr). The full folder tree of our used datasets is as follows:
-```
+```text
 .
 ├── datasets
 │   ├── Set11
@@ -104,7 +110,7 @@ You can also download our models and testsets in manual way. Our official models
         └── ... 
 ```
 You can also use your own testset for testing, which can be plased in ```./datasets/<your own testset name>/1/<your image files>```. For example, if you want to test General100 dataset, you can place this dataset as follows:
-```
+```text
 .
 └── datasets
     └── General100
@@ -116,20 +122,20 @@ You can also use your own testset for testing, which can be plased in ```./datas
 
 ### Test
 
-You can run the following command to test:
-```
+You can run the following commands to test:
+```bash
 python main.py --test --model-name <model_name> --cs-ratios <cs_ratios> --testset-names <testset_name> --gpu-id <gpu_id>
 ```
 
 where the `<testset_name>` should be same as the path `./datasets/<testset_name>`. For example:
-```
+```bash
 python main.py --test --model-name DMP_DUN_10step --cs-ratios 0.5,0.25,0.1,0.04,0.01 --testset-names Set11,Urban100 --gpu-id 0
 python main.py --test --model-name DMP_DUN_plus_2step --cs-ratios 0.5,0.25,0.1,0.04,0.01 --testset-names Set11,Urban100 --gpu-id 0
 python main.py --test --model-name DMP_DUN_plus_4step --cs-ratios 0.5,0.25,0.1,0.04,0.01 --testset-names Set11,Urban100 --gpu-id 0
 ```
 
 And the output will be saved in ```test_ans.txt``` in the root path:
-```
+```text
 >>>>>> DMP_DUN_10step <<<<<<
 [CS ratio = 0.5]
 	[Set11] PSNR(dB)/SSIM = 42.99/0.9857
@@ -188,7 +194,7 @@ The code will automatically create, load and save the training checkpoint files 
 ### Prepare Pretrained Guided Diffusion
 
 We use [guided-diffusion](https://github.com/openai/guided-diffusion) as our base network. Please put the [pretrained diffusion weight](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt) into ```./pretrained_guided_diffusion/``` as follows:
-```
+```text
 .
 └── pretrained_guided_diffusion/
     └── 256x256_diffusion_uncond.pt
@@ -197,7 +203,7 @@ We use [guided-diffusion](https://github.com/openai/guided-diffusion) as our bas
 ### Prepare Training and Validation Datasets
 
 The official DMP-DUN use Coco2017 as training dataset and BSDS500 as validation datasets. You can place them into the folder `./datasets` as follows:
-```
+```text
 .
 └── datasets
     ├── BSDS500
@@ -214,7 +220,7 @@ The official DMP-DUN use Coco2017 as training dataset and BSDS500 as validation 
 ```
 
 If you want to use your own dataset for training, you can also put them into `./datasets` as follows:
-```
+```text
 .
 └── datasets
     └── <Your own dataset>
@@ -230,14 +236,14 @@ All the official configs are stored in `./configs/<model_name>.py`, you can modi
 
 ### Begin Training
 
-You can use the following command for training a new DMP-DUN:
-```
+You can use the following commands for training a new DMP-DUN:
+```bash
 python main.py --train --model-name <model_name> --cs-ratios <cs_ratios> --gpu-id <gpu_id>
 ```
-where `<model_name>` is same as the name of config file. For example, if there exist a config file `./configs/helloworld.py`, and the `<model_name>` should be `helloworld`, i.e. `python main.py --train --model-name helloworld ...`.
+where `<model_name>` is same as the name of config file. For example, if there exist a config file `./configs/CLANNAD.py`, and the `<model_name>` should be `CLANNAD`, i.e. `python main.py --train --model-name CLANNAD ...`.
 
 For training the official DMP-DUN, you can run the following commands:
-```
+```bash
 python main.py --train --model-name DMP_DUN_10step --cs-ratios 0.5,0.25,0.1,0.04,0.01 --gpu-id 0
 python main.py --train --model-name DMP_DUN_plus_2step --cs-ratios 0.5,0.25,0.1,0.04,0.01 --gpu-id 0
 python main.py --train --model-name DMP_DUN_plus_4step --cs-ratios 0.5,0.25,0.1,0.04,0.01 --gpu-id 0

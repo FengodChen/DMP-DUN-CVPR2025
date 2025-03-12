@@ -10,7 +10,7 @@
 	</ul>
 </div>
 
-[![arXiv](https://img.shields.io/badge/Arxiv-2503.08429-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2503.08429)
+[![arXiv](https://img.shields.io/badge/arXiv-2503.08429-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2503.08429)
 [![cvpr](https://img.shields.io/badge/CVPR-HomePage-blue)](https://cvpr.thecvf.com/virtual/2025/poster/34025)
 [![modelscope](https://img.shields.io/badge/ModelScope-Model-yellow)](https://modelscope.cn/models/FengodChen/DMP-DUN/files)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFengodChen%2FDMP-DUN-CVPR2025&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFengodChen%2FDMP-DUN-CVPR2025&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)

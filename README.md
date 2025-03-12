@@ -265,7 +265,7 @@ python main.py --train --model-name DMP_DUN_plus_4step --cs-ratios 0.5,0.25,0.1,
 @Inproceedings{liao2025:DmpDun,
   author    = {Chen Liao and Yan Shen and Dan Li and Zhongli Wang},
   title     = {Using Powerful Prior Knowledge of Diffusion Model in Deep Unfolding Networks for Image Compressive Sensing},
-  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle = {2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year      = {2025},
 }
 ```

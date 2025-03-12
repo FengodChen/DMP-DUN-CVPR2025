@@ -1,10 +1,20 @@
-
-
-
 <div align="center">
 
-<h3>—— CVPR 2025 ——</h3>
-<h2>Using Powerful Prior Knowledge of Diffusion Model in Deep Unfolding Networks for Image Compressive Sensing</h2>  
+<!-- Center-No-Ver-Bar-H1-H2 for GitHub, fork from https://gist.github.com/CodeByAidan/bb43bdb1c07c0933d8b67c23515fb912 -->
+<div id="toc">
+	<ul align="center" style="list-style: none">
+		<summary>
+			<h2> Using Powerful Prior Knowledge of Diffusion Model in Deep Unfolding Networks for Image Compressive Sensing </h2>
+			<h3> —— CVPR 2025 —— </h3>
+		</summary>
+	</ul>
+</div>
+
+[![arXiv](https://img.shields.io/badge/Arxiv-2503.08429-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2503.08429)
+[![cvpr](https://img.shields.io/badge/CVPR-HomePage-blue)](https://cvpr.thecvf.com/virtual/2025/poster/34025)
+[![modelscope](https://img.shields.io/badge/ModelScope-Model-yellow)](https://modelscope.cn/models/FengodChen/DMP-DUN/files)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFengodChen%2FDMP-DUN-CVPR2025&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFengodChen%2FDMP-DUN-CVPR2025&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
+[![GitHub repo stars](https://img.shields.io/github/stars/FengodChen/DMP-DUN-CVPR2025?style=flat&logo=github&logoColor=whitesmoke&label=Stars)](https://github.com/FengodChen/DMP-DUN-CVPR2025/stargazers)
 
 **Chen Liao**<sup> 1</sup>   **Yan Shen**<sup> 1, ✉</sup>   **Dan Li**<sup> 1</sup>   **Zhongli Wang**<sup> 2</sup>
 

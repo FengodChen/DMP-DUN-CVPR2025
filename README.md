@@ -13,7 +13,6 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2503.08429-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2503.08429)
 [![cvpr](https://img.shields.io/badge/CVPR-HomePage-blue)](https://cvpr.thecvf.com/virtual/2025/poster/34025)
 [![modelscope](https://img.shields.io/badge/ModelScope-DMP--DUN-yellow)](https://modelscope.cn/models/FengodChen/DMP-DUN/files)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFengodChen%2FDMP-DUN-CVPR2025&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://github.com/FengodChen/DMP-DUN-CVPR2025)
 [![GitHub repo stars](https://img.shields.io/github/stars/FengodChen/DMP-DUN-CVPR2025?style=flat&logo=github&logoColor=whitesmoke&label=Stars)](https://github.com/FengodChen/DMP-DUN-CVPR2025/stargazers)
 
 **Chen Liao**<sup> 1</sup>   **Yan Shen**<sup> 1, ✉</sup>   **Dan Li**<sup> 1</sup>   **Zhongli Wang**<sup> 2</sup>
